@@ -9,6 +9,8 @@ import Faqs from '@components/sections/Faqs.astro';
 import { faqLists } from '@data/faqs';
 import homeImage from '../assets/images/home/fondo.jpg';
 import BioShowcase from '@components/sections/Pesentacion.astro';
+
+import BookPres from '@components/sections/PresLibro.astro';
 import headshot from '@assets/images/dircderecho.jpg';
 import book from '@assets/images/libro.jpg';
 
@@ -49,7 +51,7 @@ const faqsSection = {
 }
 
 const bioText = `Dr. Jorge Luis Salazar Soplapuco, abogado por la Universidad Nacional de Trujillo, Perú. Magister en Derecho Público por la Universidad de Bruselas, Bélgica. Doctor en Derecho por la Universidad Privada Antenor Orrego de Trujillo. Doctorando en Derecho Fundamentales por la Universidad Carlos III de Madrid. España. Docente nombrado de la Facultad de Derecho y Ciencias Políticas y de la Escuela de Posgrado de la Universidad Nacional de Cajamarca. Docente invitado de la Universidad Nacional Mayor de San Marcos y de la Universidad Privada Antenor Orrego de Trujillo. Director de la Unidad de Posgrado de Derecho de la Escuela de Posgrado de la UNC. Miembro fundador de la Asociación de Constitucionalistas del Perú. Directo de la Revista de Investigación Jurídica Quaestio Iuris. Autor de libros de Derecho y Literatura.`;
-
+const bookText = `El libro busca responder a la pregunta ¿Qué argumento jurídico podría ser considerado para garantizar el ejercicio de los derechos fundamentales de los contribuyentes en sus dos vertientes: derechos individuales y derechos sociales? En ese sentido, planteamos que el argumento más coherente y compatible con los derechos fundamentales previstos en nuestra Constitución, es el garantismo como teoría jurídica, política y filosófica, la misma que ha sido desarrollada por el distinguido Profesor Luigi Ferrajoli, y que, en el presente trabajo, pretendemos aplicarla al Derecho Tributario.`
 ---
 
 <Layout title={seoTitle} description={seoDescription} isIndex={true}>
@@ -67,6 +69,11 @@ const bioText = `Dr. Jorge Luis Salazar Soplapuco, abogado por la Universidad Na
             headshotSrc={headshot}
             bookSrc={book}
             bio={bioText}
+        />
+        <BookPres
+            headshotSrc={book}
+            bookSrc={book}
+            bio={bookText}
         />
         <div class="mt-20">
             <Logos content={logosSection} background="base" padding='small'/>

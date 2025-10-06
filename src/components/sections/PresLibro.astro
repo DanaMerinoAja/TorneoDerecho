@@ -23,22 +23,8 @@ const {
   aria-labelledby={`bio-${name.replaceAll(' ', '-').toLowerCase()}`}
 >
   <div class="site-container max-w-[var(--container-base)] px-6 mx-auto">
-    <h2 class="mb-6">
-      Presentación del Libro: "Garantismo Tributario y los Derechos del Contribuyente"
-    </h2>
-
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-      <!-- Foto -->
-      <figure class="md:col-span-2 place-self-start">
-        <img
-          src={headshotSrc.src}
-          alt={headshotAlt}
-          class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-[1rem] shadow-md border border-black/10 bg-[var(--color-background-light)]"
-          loading="lazy"
-        />
-      </figure>
-
-      <!-- Texto SOLO en sección verde -->
+        <!-- Texto SOLO en sección verde -->
       <div class="md:col-span-10">
         <div
           class="rounded-[1rem] p-6 md:p-8 shadow-sm"
@@ -49,6 +35,17 @@ const {
           </p>
         </div>
       </div>
+      <!-- Foto -->
+      <figure class="md:col-span-2 place-self-start">
+        <img
+          src={headshotSrc.src}
+          alt={headshotAlt}
+          class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-[1rem] shadow-md border border-black/10 bg-[var(--color-background-light)]"
+          loading="lazy"
+        />
+      </figure>
+
+      
     </div>
   </div>
 </section>

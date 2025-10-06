@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import { featureLists } from '@data/features';
 
 import 'swiper/swiper-bundle.css';
+import bases from '@assets/bases.pdf'
 
 const features = featureLists.main.features;
 import logo_header from '@assets/images/logos/logo_home.png';
@@ -51,6 +52,8 @@ const { content } = Astro.props;
           <p class="text-white mt-4 text-lg max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
             {content.description}
           </p>
+          <Button href={bases} variant="primary">Descargar bases (PDF)</Button>
+          
         </div>
       </div>
 
@@ -71,9 +74,6 @@ const { content } = Astro.props;
           <div class="absolute inset-0 bg-black/50 z-10"></div>
           <div class="relative z-20 flex flex-col justify-center h-full px-20">
             <h1 class="text-white text-balance font-bold text-left ">{feature.title}</h2>
-            <div class="items-center">
-                <Button href={feature.link} variant="primary">Ver más</Button>
-            </div>
           </div>
         </div>
       ))}

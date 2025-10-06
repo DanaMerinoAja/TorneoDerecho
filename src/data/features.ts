@@ -29,31 +29,31 @@ export const featureLists: Record<string, FeatureList> = {
                 icon: Zap,
                 title: 'Desarrolla habilidades de oratoria y argumentación jurídica',
                 image: oratoria,
-                link:"/servicios/mantenimiento-mecanico-electrico/"
+                link:""
             },
             {
                 icon: Shield,
                 title: 'Conecta con profesionales y expertos nacionales.',
                 image: conocimiento,
-                link:"/servicios/mantenimiento-neumaticos/"
+                link:""
             },
             {
                 icon: Drill,
                 title: 'Experiencia académica que suma a tu formación profesional',
                 image: formacion,
-                link:"/servicios/fabricacion-estructuras-metalicas/"
+                link:""
             },
             {
                 icon: Drill,
                 title: 'Beneficio económico',
                 image: premio,
-                link:"/servicios/fabricacion-estructuras-metalicas/"
+                link:""
             },
             {
                 icon: Drill,
                 title: 'Celebración de bienvenida y clausura',
                 image: fiesta,
-                link:"/servicios/fabricacion-estructuras-metalicas/"
+                link:""
             }
         ]
     }
