@@ -15,6 +15,8 @@ import ausp10 from '@assets/images/logos/ausp10.jpg'
 import ausp11 from '@assets/images/logos/ausp11.jpg'
 import ausp12 from '@assets/images/logos/ausp12.png'
 import ausp13 from '@assets/images/logos/ausp13.jpg'
+import ausp14 from '@assets/images/logos/ausp14.jpg'
+import ausp15 from '@assets/images/logos/ausp15.png'
 
 export interface Logo {
     src: ImageMetadata;
@@ -83,6 +85,14 @@ export const logoLists: Record<string, LogoList> = {
             },
             {
                 src: ausp13,
+                alt: 'SyMiSRL',
+            },
+            {
+                src: ausp14,
+                alt: 'SyMiSRL',
+            },
+            {
+                src: ausp15,
                 alt: 'SyMiSRL',
             },
         ]
