@@ -1,4 +1,4 @@
-import { Bolt, Construction, Drill, Shield, Zap } from 'lucide-astro';
+import { HandMetal, Crown, Gem, Zap, Handshake } from 'lucide-astro';
 import conocimiento from '@assets/images/beneficios/derechio_conocimiento.png'
 import oratoria from '@assets/images/beneficios/derecho_oratoria.png'
 import premio from '@assets/images/beneficios/derecho_premio.webp'
@@ -32,25 +32,25 @@ export const featureLists: Record<string, FeatureList> = {
                 link:""
             },
             {
-                icon: Shield,
+                icon: Handshake,
                 title: 'Conecta con profesionales y expertos nacionales.',
                 image: conocimiento,
                 link:""
             },
             {
-                icon: Drill,
+                icon: Crown,
                 title: 'Experiencia académica que suma a tu formación profesional',
                 image: formacion,
                 link:""
             },
             {
-                icon: Drill,
+                icon: Gem,
                 title: 'Beneficio económico',
                 image: premio,
                 link:""
             },
             {
-                icon: Drill,
+                icon: HandMetal,
                 title: 'Celebración de bienvenida y clausura',
                 image: fiesta,
                 link:""

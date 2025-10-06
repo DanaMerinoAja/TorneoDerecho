@@ -9,6 +9,12 @@ import bases from '@assets/bases.pdf'
 const features = featureLists.main.features;
 import logo_header from '@assets/images/logos/logo_home.png';
 
+// components/Carousel.tsx
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 interface HeroContent {
     title: string;
     description: string;
@@ -81,8 +87,6 @@ const { content } = Astro.props;
     </div>
 
     <!-- Optional navigation -->
-    <div class="swiper-button-prev z-30 text-white"></div>
-    <div class="swiper-button-next z-30 text-white"></div>
     <div class="swiper-pagination z-30"></div>
   </div>
 
