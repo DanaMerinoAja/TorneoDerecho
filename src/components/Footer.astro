@@ -1,0 +1,32 @@
+---
+import Logo from '@components/Logo.astro';
+import { siteConfig } from '@data/config';
+import ContactInfo from '@components/sections/ContactInfo.astro'
+
+interface Props {
+  footerCta?: {
+    title: string;
+    description: string;
+    hideCta: boolean;
+  };
+}
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="contacto" class="bg-primary text-white mx-auto p-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 pb-2 border-b border-background-light items-center">
+    <div class="col-span-1">
+      <ContactInfo/>
+    </div>
+    
+    <div class="place-items-center">
+      <Logo variant="footer" />
+    </div>
+    
+  </div>
+
+  <div class="text-body-dark text-center pt-2">
+    © {currentYear} {siteConfig.companyName}. All rights reserved.
+  </div>
+</footer>

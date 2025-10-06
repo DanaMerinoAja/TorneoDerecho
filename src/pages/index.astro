@@ -1,0 +1,61 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/sections/Hero.astro';
+import Features from '@components/sections/Features.astro';
+import { featureLists } from '@data/features';
+import Logos from '@components/sections/Logos.astro';
+import { logoLists } from '@data/logos';
+import Faqs from '@components/sections/Faqs.astro';
+import { faqLists } from '@data/faqs';
+import homeImage from '../assets/images/home/fondo.jpg';
+const seoTitle = "Universal Andina";
+const seoDescription = "Especialistas en mantenimiento mecánico";
+
+const heroContent = {
+    title: '',
+    description: 'Atrévete a vivirlo',
+    buttons: [
+        {
+            text: 'Contáctanos',
+            link: '#contacto',
+            target: '_self'
+        }
+    ],
+    backgroundImage: homeImage,
+    overlayOpacity: 0.2
+}
+
+const featuresSection = {
+    eyebrow: "",
+    title: "Nuestros servicios",
+    description: "",
+    features: featureLists.main.features
+}
+
+const logosSection = {
+    eyebrow: "Nuestros clientes",
+    logos: logoLists.main.logos
+}
+
+const faqsSection = {
+    eyebrow: "Conócenos",
+    title: '¿Quiénes somos?',
+    description: 'El Concurso de Derecho Tributario de la Universidad Nacional de Cajamarca busca consolidarse  como un espacio académico innovador y participativo,  que promueva el aprendizaje mediante dinámicas de preguntas y respuestas. Se proyecta como una plataforma que fortalezca la formación crítica y práctica de los estudiantes de las carreras de Derecho, Economía y Contabilidad, incentivando el estudio riguroso, la sana competencia y la construcción de futuros profesionales comprometidos con la justicia tributaria y el desarrollo del país.',
+    faqs: faqLists.main.faqs
+}
+---
+
+<Layout title={seoTitle} description={seoDescription} isIndex={true}>
+    <section id="inicio">
+        <Hero content={heroContent} />    
+    </section>
+    <section id="nosotros" class="mb-20 mt-15 scroll-mt-20">
+        <Faqs content={faqsSection} background="base" padding="base" />
+    </section>
+    <section id="servicios" class="mb-20 mt-20 scroll-mt-18">
+        <Features content={featuresSection} padding="base" background="light" />
+        <div class="mt-20">
+            <Logos content={logosSection} background="base" padding='small'/>
+        </div>
+    </section>    
+</Layout>
