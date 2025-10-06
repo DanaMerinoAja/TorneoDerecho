@@ -8,8 +8,12 @@ import { logoLists } from '@data/logos';
 import Faqs from '@components/sections/Faqs.astro';
 import { faqLists } from '@data/faqs';
 import homeImage from '../assets/images/home/fondo.jpg';
-const seoTitle = "Universal Andina";
-const seoDescription = "Especialistas en mantenimiento mecánico";
+import BioShowcase from '@components/sections/Pesentacion.astro';
+import headshot from '@assets/images/dircderecho.jpg';
+import book from '@assets/images/libro.jpg';
+
+const seoTitle = "Torneo nacional de derecho tributario";
+const seoDescription = "Torneo nacional de derecho tributario Universidad Nacional de Cajamarca";
 
 const heroContent = {
     title: '',
@@ -43,6 +47,9 @@ const faqsSection = {
     description: 'El Concurso de Derecho Tributario de la Universidad Nacional de Cajamarca busca consolidarse  como un espacio académico innovador y participativo,  que promueva el aprendizaje mediante dinámicas de preguntas y respuestas. Se proyecta como una plataforma que fortalezca la formación crítica y práctica de los estudiantes de las carreras de Derecho, Economía y Contabilidad, incentivando el estudio riguroso, la sana competencia y la construcción de futuros profesionales comprometidos con la justicia tributaria y el desarrollo del país.',
     faqs: faqLists.main.faqs
 }
+
+const bioText = `Dr. Jorge Luis Salazar Soplapuco, abogado por la Universidad Nacional de Trujillo, Perú. Magister en Derecho Público por la Universidad de Bruselas, Bélgica. Doctor en Derecho por la Universidad Privada Antenor Orrego de Trujillo. Doctorando en Derecho Fundamentales por la Universidad Carlos III de Madrid. España. Docente nombrado de la Facultad de Derecho y Ciencias Políticas y de la Escuela de Posgrado de la Universidad Nacional de Cajamarca. Docente invitado de la Universidad Nacional Mayor de San Marcos y de la Universidad Privada Antenor Orrego de Trujillo. Director de la Unidad de Posgrado de Derecho de la Escuela de Posgrado de la UNC. Miembro fundador de la Asociación de Constitucionalistas del Perú. Directo de la Revista de Investigación Jurídica Quaestio Iuris. Autor de libros de Derecho y Literatura.`;
+
 ---
 
 <Layout title={seoTitle} description={seoDescription} isIndex={true}>
@@ -57,5 +64,12 @@ const faqsSection = {
         <div class="mt-20">
             <Logos content={logosSection} background="base" padding='small'/>
         </div>
+    </section>
+    <section>
+        <BioShowcase
+            headshotSrc={headshot}
+            bookSrc={book}
+            bio={bioText}
+        />
     </section>    
 </Layout>

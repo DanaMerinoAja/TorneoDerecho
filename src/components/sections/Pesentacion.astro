@@ -1,0 +1,81 @@
+---
+// src/components/BioShowcase.astro
+interface Props {
+  name?: string;
+  bio: string;
+  headshotSrc: ImageMetadata; // import img o URL
+  bookSrc?: ImageMetadata;    // opcional
+  headshotAlt?: string;
+  bookAlt?: string;
+}
+
+const {
+  name = "Dr. Jorge Luis Salazar Soplapuco",
+  bio,
+  headshotSrc,
+  bookSrc,
+  headshotAlt = "Retrato de " + name,
+  bookAlt = "Portada de libro"
+} = Astro.props as Props;
+---
+
+<section
+  class="w-full py-large"
+  style={`background: var(--color-background);`}
+  aria-labelledby="bio-${name.replaceAll(' ', '-').toLowerCase()}"
+>
+  <div class="site-container max-w-[var(--container-base)] px-6 mx-auto">
+    <!-- Banda de fondo -->
+    <div
+      class="relative rounded-[var(--border-radius-large)] overflow-hidden"
+      style="
+        background: linear-gradient(
+          to bottom,
+          var(--color-background) 0%,
+          var(--color-background) 35%,
+          var(--color-accent) 35%,
+          var(--color-accent) 100%
+        );
+      "
+    >
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center p-6 md:p-10">
+        <!-- Foto -->
+        <figure class="md:col-span-2 place-self-start md:place-self-auto">
+          <img
+            src={headshotSrc.src}
+            alt={headshotAlt}
+            class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-[1rem] shadow-md border border-black/10 bg-[var(--color-background-light)]"
+            loading="lazy"
+          />
+        </figure>
+
+        <!-- Texto -->
+        <div class="md:col-span-8">
+          {name && (
+            <h2
+              id={`bio-${name.replaceAll(' ', '-').toLowerCase()}`}
+              class="text-[var(--color-headline)] mb-3 leading-tight"
+            >
+              {name}
+            </h2>
+          )}
+          <p class="text-[var(--color-body-base)] leading-relaxed text-balance">
+            {bio}
+          </p>
+        </div>
+
+        <!-- Portada del libro -->
+        {bookSrc && (
+          <figure class="md:col-span-2 md:justify-self-end">
+            <img
+              src={bookSrc.src}
+              alt={bookAlt}
+              class="w-50 md:w-72 lg:w-60 drop-shadow-xl rounded-[0.4rem] bg-[var(--color-background-light)]"
+              loading="lazy"
+            />
+          </figure>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
