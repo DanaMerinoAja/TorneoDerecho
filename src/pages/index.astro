@@ -31,13 +31,13 @@ const heroContent = {
 
 const featuresSection = {
     eyebrow: "",
-    title: "Nuestros servicios",
-    description: "",
+    title: "Beneficios",
+    description: "Lo que te llevas de tu participación",
     features: featureLists.main.features
 }
 
 const logosSection = {
-    eyebrow: "Nuestros clientes",
+    eyebrow: "Nos auspician",
     logos: logoLists.main.logos
 }
 
@@ -61,9 +61,6 @@ const bioText = `Dr. Jorge Luis Salazar Soplapuco, abogado por la Universidad Na
     </section>
     <section id="servicios" class="mb-20 mt-20 scroll-mt-18">
         <Features content={featuresSection} padding="base" background="light" />
-        <div class="mt-20">
-            <Logos content={logosSection} background="base" padding='small'/>
-        </div>
     </section>
     <section>
         <BioShowcase
@@ -71,5 +68,9 @@ const bioText = `Dr. Jorge Luis Salazar Soplapuco, abogado por la Universidad Na
             bookSrc={book}
             bio={bioText}
         />
-    </section>    
+        <div class="mt-20">
+            <Logos content={logosSection} background="base" padding='small'/>
+        </div>
+    </section>
+    
 </Layout>
